@@ -65,10 +65,11 @@ On the other hand, the `absolute` value of `position` will make the element appe
 Additionally, *box offsets* move them in relation to the first `non-static` positioned parent. In case such a parent does not exist, the element will use the `<body>` as reference.
 
 ```css
-#container{
+#container {
   background-color:white;
   position:relative;
-#relpos{
+}
+#relpos {
   position: absolute;
   left: 20px;
   top:20px;
