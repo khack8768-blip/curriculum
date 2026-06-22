@@ -6,29 +6,10 @@ repeat task.wait() until game:IsLoaded()
 -- 🟢 Nút mở menu chính
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
-local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 
 ScreenGui.Parent = game.CoreGui
-
--- Nút mở/tắt
-ImageButton.Parent = ScreenGui
-ImageButton.Size = UDim2.new(0, 50, 0, 50)
-ImageButton.Position = UDim2.new(0, 10, 0, 10)
-ImageButton.Image = "rbxassetid://0" -- ID ảnh
-
--- Menu
-Frame.Parent = ScreenGui
-Frame.Size = UDim2.new(0, 300, 0, 200)
-Frame.Position = UDim2.new(0.5, -150, 0.5, -100)
-Frame.Visible = false
-
-UICorner.Parent = Frame
-
--- Bật/Tắt
-ImageButton.MouseButton1Click:Connect(function()
-    Frame.Visible = not Frame.Visible
-end)
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -64,7 +45,7 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
 	Main0 = Window:AddTab({ Title = "universal" }),  -- 👈 đổi tên tab 1
 	Main1 = Window:AddTab({ Title = "grow a gaden 2" }),  -- 👈 đổi tên tab 2
-	Main2 = Window:AddTab({ Title = "blox fruit🍎" }),    -- 👈 đổi tên tab 5
+	Main2 = Window:AddTab({ Title = "blox fruit" }),    -- 👈 đổi tên tab 5
 }
 
 ------------------------------------------------
@@ -72,7 +53,7 @@ local Tabs = {
 ------------------------------------------------
 Tabs.Main1:AddButton({
 	Title = "speed hub",                             -- 👈 tên nút hiển thị
-	Description = "script này ngon á đủ chức năng cả😃",-- 👈 mô tả
+	Description = "key tự get",-- 👈 mô tả
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
 	end
@@ -80,7 +61,7 @@ Tabs.Main1:AddButton({
 
 Tabs.Main1:AddButton({
 	Title = "foxname",                             -- 👈 tên nút hiển thị
-	Description = "script này ngon á đủ chức năng cả😃",-- 👈 mô tả
+	Description = "key:Foxnamegag2_Free108162526849273",-- 👈 mô tả
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Davidena1611/skibidi/refs/heads/main/foxname-nokey.lua"))() -- 👈 link script tải
 	end
